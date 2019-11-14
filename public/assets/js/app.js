@@ -24,5 +24,8 @@ $("#submit").click(function(event){
         data: circuit
     }).then(function(data){
         console.log(data);
+        $(".form-control").val("");
+    }).catch(function(err){
+        console.log(err)
     })
 });
