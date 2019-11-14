@@ -55,6 +55,14 @@ app.post("/add", function(req, res){
 )
 });
 
+app.get("/cabs/:searchBy/:searchParam", function(req, res){
+  let query = {};
+  query[req.params.searchBy] = req.params.searchParam;
+  db.Cab.find(query).then(function(docs){
+    res.json(docs);
+  })
+})
+
 // Start the server
 app.listen(PORT, function() {
   console.log("App running on port " + PORT + "!");
