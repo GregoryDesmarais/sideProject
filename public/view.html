@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title>MDCI</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
+    <script src='https://code.jquery.com/jquery-3.4.1.min.js'></script>
+    <script src='assets/js/bootstrap.bundle.min.js'></script>
+</head>
+
+<body>
+    <div class='container text-center margin-bottom-xl'>
+        <form id="cabEntry">
+                <table class="table">
+                    <tr>
+                        <td>
+                            <div class="form-group form-inline row">
+                                <label for="searchBy" class="form-label col-sm-2">Search By:</label>
+                                <select class="form-control col-sm-3" id="searchBy">
+                                    <option>Site</option>
+                                    <option>Location</option>
+                                    <option>Customer Name</option>
+                                    <option>Receptacle</option>
+                                    <option>PDU</option>
+                                </select>
+                                <div class="col-sm-7">
+                                    <input type="text" class="form-control w-100" id="search" aria-describedby="search" placeholder="Segra">
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </form>
+            <a class="btn btn-outline-primary btn-lg btn-block" role="button" id="submit">Search</a>
+        <form id="cabEntry">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Site</th>
+                        <th>Location</th>
+                        <th>Customer</th>
+                        <th>Receptacle</th>
+                        <th>Circuit</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </form>
+    </div>
+    <script src="assets/js/app.js"></script>
+</body>
+</html>
