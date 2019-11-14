@@ -27,7 +27,7 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-mongoose.connect("mongodb://localhost/cabs", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/circuit", { useNewUrlParser: true });
 
 // Routes
 // db.Cab.create({
@@ -39,17 +39,21 @@ mongoose.connect("mongodb://localhost/cabs", { useNewUrlParser: true });
 //       pdu: "A1", 
 //       panel: "1", 
 //       breaker1: "1",
-//       recepticle: "L5-20"
+//       receptacle: "L5-20"
 //   }]
 // })
 
 app.get("/", function(req, res) {
-res.send("/index.html");
+  res.send("/index.html");
+})
+
+app.get("/view", function(req, res) {
+  res.send("/view.html");
 })
 
 app.post("/add", function(req, res){
   console.log(req.body)
-  db.Cab.create(req.body).then(function(doc){
+  db.Circuit.create(req.body).then(function(doc){
     res.json(doc);
   }
 )
