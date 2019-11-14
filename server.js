@@ -59,10 +59,10 @@ app.post("/add", function(req, res){
 )
 });
 
-app.get("/cabs/:searchBy/:searchParam", function(req, res){
+app.get("/circuits/:searchBy/:searchParam", function(req, res){
   let query = {};
   query[req.params.searchBy] = req.params.searchParam;
-  db.Cab.find(query).then(function(docs){
+  db.Circuit.find(query).then(function(docs){
     res.json(docs);
   })
 })
